@@ -2,23 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const livros = document.querySelectorAll('.livro');
     const mensagem = document.getElementById('mensagem');
     const porta = document.getElementById('porta');
+    const gas = document.getElementById('gas');
 
-    // Referências aos elementos de áudio
-    const somArmadilha = document.getElementById('somArmadilha'); // Som para os livros da armadilha
-    const somPorta = document.getElementById('somPorta'); // Som da passagem
+    const somArmadilha = document.getElementById('somArmadilha');
+    const somPorta = document.getElementById('somPorta');
 
-    // Gerar 3 IDs de livros aleatórios (sem repetição)
-    const idsLivros = Array.from({ length: livros.length }, (_, i) => i + 1); // Cria um array [1, 2, ..., número de livros]
+    const idsLivros = Array.from({ length: livros.length }, (_, i) => i + 1);
     const livrosArmadilha = [];
     for (let i = 0; i < 3; i++) {
         const indiceAleatorio = Math.floor(Math.random() * idsLivros.length);
         livrosArmadilha.push(idsLivros[indiceAleatorio]);
-        idsLivros.splice(indiceAleatorio, 1); // Remove o ID escolhido para evitar repetição
+        idsLivros.splice(indiceAleatorio, 1);
     }
 
-    console.log('Livros da armadilha:', livrosArmadilha); // Para depuração
+    console.log('Livros da armadilha:', livrosArmadilha);
 
-    // Definir o livro secreto (para abrir a passagem)
     const livroSecreto = Math.floor(Math.random() * livros.length) + 1;
 
     livros.forEach(livro => {
@@ -26,31 +24,31 @@ document.addEventListener('DOMContentLoaded', function () {
             const id = parseInt(this.getAttribute('data-id'));
 
             if (id == livroSecreto) {
-                // Livro correto: ativa a passagem secreta
                 somPorta.currentTime = 0;
                 somPorta.play();
 
-                mensagem.textContent = 'Você encontrou a passagem secreta!';
-                mensagem.style.color = 'green';
-                porta.style.display = 'block'; // Mostra a porta
-                porta.classList.add('aberta'); // Ativa a animação
+                porta.style.visibility = 'visible';
+                porta.classList.add('aberta');
             } else if (livrosArmadilha.includes(id)) {
-                // Livros da armadilha: ativa o som e exibe mensagem
                 somArmadilha.currentTime = 0;
                 somArmadilha.play();
 
-                mensagem.textContent = 'Cuidado! Você ativou uma armadilha!';
-                mensagem.style.color = 'red';
+                gas.classList.remove('libera');
+
+                void gas.offsetWidth;
+
+                gas.classList.add('libera');
+
+                setTimeout(() => {
+                    gas.classList.remove('libera');
+                }, 3000);
             } else {
-                // Livros normais: sem som, exibe mensagem padrão
-                mensagem.textContent = 'Nada acontece.';
-                mensagem.style.color = 'gray';
-                porta.classList.remove('aberta'); // Remove a animação
+                porta.classList.remove('aberta');
                 setTimeout(() => {
                     if (!porta.classList.contains('aberta')) {
-                        porta.style.display = 'none'; // Esconde após a transição
+                        porta.style.visibility = 'hidden';
                     }
-                }, 500); // Espera a transição de 0.5s
+                }, 500);
             }
         });
     });
