@@ -17,9 +17,7 @@ body {
 #estante1{
     padding: 30px;
     height: 409px;
-    /* border-radius: 10px 10px 0 0; */
     margin: 20px auto 0 auto;
-    /* justify-content: flex-end; */
     background-image: url('../img/estante1.png');
 }
 
@@ -27,16 +25,13 @@ body {
     padding: 30px;
     height: 312px;
     margin: 0 auto 0 auto;
-    /* justify-content: center; */
     background-image: url('../img/estante2.png');
 }
 
 #estante3{
     padding: 30px;
     height: 475px;
-    /* border-radius: 0 0 10px 10px; */
     margin: 0 auto 0 auto;
-    /* justify-content: flex-start; */
     background-image: url('../img/estante3.png');
 }
 
@@ -97,18 +92,47 @@ body {
     justify-content: center;
     font-size: 24px;
     overflow: hidden;
-    transition: width 0.5s ease; /* Animação suave de 0.5 segundos */
+    transition: width 0.5s ease;
 }
 
 #porta img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ajusta a posição exata do centro */
+    transform: translate(-50%, -50%);
   }
 
 #porta.aberta {
-    width: 210px; /* Largura final quando aberta */
+    width: 210px;
     height: 250px;
     border: 2px solid black;
+}
+
+#gas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#gas img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+#gas.libera {
+    width: 300px;
+    visibility: visible;
+    opacity: 1;
 }
