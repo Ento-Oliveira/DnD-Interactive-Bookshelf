@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const livros = document.querySelectorAll('.livro');
-    const mensagem = document.getElementById('mensagem');
     const porta = document.getElementById('porta');
     const gas = document.getElementById('gas');
 
