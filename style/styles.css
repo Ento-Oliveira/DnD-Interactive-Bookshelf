@@ -38,44 +38,43 @@ body {
 .livro {
     width: 30px;
     height: 125px;
-    background-color: #D2B48C;
+    background-color: rgba(0, 0, 0, 0);
     color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px;
     cursor: pointer;
-    border: 2px solid #A0522D;
-    border-radius: 5px;
-    transition: transform 0.2s;
-    opacity: 0;
 }
 
 .livro[data-id="1"] { margin: 63px 71px; width: 92px; height: 132px; }
-.livro[data-id="2"] { margin: 282px 25px; width: 22px; height: 148px; }
-.livro[data-id="3"] { margin: 57px 218px; width: 23px; height: 138px; }
+.livro[data-id="2"] { margin: 282px 27px; width: 23px; height: 145px; }
+.livro[data-id="3"] { margin: 57px 221px; width: 25px; height: 138px; }
 .livro[data-id="4"] { margin: 304px -136px; width: 36px; height: 126px; }
 .livro[data-id="5"] { margin: 61px -71px; width: 31px; height: 134px; }
-.livro[data-id="6"] { margin: 39px 162px; width: 28px;height: 121px; }
-.livro[data-id="7"] { margin: 207px -70px; width: 29px;height: 126px; }
-.livro[data-id="8"] { margin: 30px -165px; width: 97px;height: 130px; }
+.livro[data-id="6"] { margin: 39px 162px; width: 28px; height: 121px; }
+.livro[data-id="7"] { margin: 207px -67px; width: 31px;height: 126px; }
+.livro[data-id="8"] { margin: 30px -162px; width: 97px;height: 130px; }
 .livro[data-id="9"] { margin: 20px -110px; width: 30px;height: 140px; }
-.livro[data-id="10"] { margin: 195px -148px; width: 32px;height: 138px; }
-.livro[data-id="11"] { margin: 6px 32px; width: 33px;height: 119px; }
-.livro[data-id="12"] { margin: 6px -30px; width: 29px;height: 119px; }
-.livro[data-id="13"] { margin: 6px 42px; width: 32px;height: 119px; }
-.livro[data-id="14"] { margin: 6px 309px; width: 26px;height: 119px; }
-.livro[data-id="15"] { margin: 8px -148px; width: 35px;height: 117px; }
+.livro[data-id="10"] { margin: 195px -148px; width: 34px;height: 138px; }
+.livro[data-id="11"] { margin: 6px 32px; width: 33px; height: 119px; }
+.livro[data-id="12"] { margin: 6px -28px; width: 33px; height: 119px; }
+.livro[data-id="13"] { margin: 6px 44px; width: 35px; height: 119px; }
+.livro[data-id="14"] { margin: 6px 307px; width: 29px; height: 119px; }
+.livro[data-id="15"] { margin: 8px -142px; width: 35px;height: 115px; }
 
 .livro:hover {
     transform: scale(1.05);
-}
-
-#mensagem {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-    color: #333;
+    border: 2px solid rgba(50, 255, 255, 0.0);
+    box-shadow: 
+      0 0 5px rgba(50, 255, 255, 10.8),
+      0 0 10px rgba(50, 255, 255, 0.6),
+      0 0 20px rgba(50, 255, 255, 0.4),
+      0 0 40px rgba(50, 255, 255, 0.2),
+      0 0 80px rgba(50, 255, 255, 0.1);
+    animation: neon-glow 1.5s infinite alternate;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 #porta {
