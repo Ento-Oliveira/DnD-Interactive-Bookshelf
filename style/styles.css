@@ -50,12 +50,12 @@ body {
 .livro[data-id="1"] { margin: 63px 71px; width: 92px; height: 132px; }
 .livro[data-id="2"] { margin: 282px 27px; width: 23px; height: 145px; }
 .livro[data-id="3"] { margin: 57px 221px; width: 25px; height: 138px; }
-.livro[data-id="4"] { margin: 304px -136px; width: 36px; height: 126px; }
-.livro[data-id="5"] { margin: 61px -71px; width: 31px; height: 134px; }
+.livro[data-id="4"] { margin: 304px -138px; width: 38px; height: 126px; }
+.livro[data-id="5"] { margin: 61px -73px; width: 33px; height: 134px; }
 .livro[data-id="6"] { margin: 39px 162px; width: 28px; height: 121px; }
 .livro[data-id="7"] { margin: 207px -67px; width: 31px;height: 126px; }
 .livro[data-id="8"] { margin: 30px -162px; width: 97px;height: 130px; }
-.livro[data-id="9"] { margin: 20px -110px; width: 30px;height: 140px; }
+.livro[data-id="9"] { margin: 20px -110px; width: 32px;height: 140px; }
 .livro[data-id="10"] { margin: 195px -148px; width: 34px;height: 138px; }
 .livro[data-id="11"] { margin: 6px 32px; width: 33px; height: 119px; }
 .livro[data-id="12"] { margin: 6px -28px; width: 33px; height: 119px; }
