@@ -41,7 +41,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     width: 800px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.9);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
